@@ -1,0 +1,72 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HospiEnCasa.App.Frontend
+build_property.RootNamespace = HospiEnCasa.App.Frontend
+build_property.ProjectDir = C:\Hospitalizacion\HospiEnCasa.App\HospiEnCasa.App.Frontend\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Hospitalizacion\HospiEnCasa.App\HospiEnCasa.App.Frontend
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/Personas/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyc29uYXNcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/SharedPages/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkUGFnZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/SharedPages/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkUGFnZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/pagEnfermeras/Nurses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGFnRW5mZXJtZXJhc1xOdXJzZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-7zghzo46u5
+
+[C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/pagFamiliares/Familares.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGFnRmFtaWxpYXJlc1xGYW1pbGFyZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-0j7td7isxx
+
+[C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/pagMedicos/Medicos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGFnTWVkaWNvc1xNZWRpY29zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-4iyobb86f0
+
+[C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/pagPacientes/Pacientes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGFnUGFjaWVudGVzXFBhY2llbnRlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-9ukdv03sz0
+
+[C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-vknwb4m9cw

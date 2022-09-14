@@ -1,0 +1,30 @@
+.feather-16{
+    width: 16px;
+    height: 16px;
+    }
+    .feather-24{
+    width: 24px;
+    height: 24px;
+    }
+    .feather-32{
+    width: 32px;
+    height: 32px;
+    }
+
+    .btn{
+        border:black;
+        background-color:rgb(79, 50, 47);
+        cursor:pointer;
+        display:inline-block
+    }
+
+    .dv-cntr{
+        text-align:center;
+        height: 32px;
+    }
+    
+    .add-btn{
+        text-align: right;
+        margin-right: 4%;
+    }
+

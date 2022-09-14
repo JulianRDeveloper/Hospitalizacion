@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\HospiEnCasa.App.Frontend.props" />
+</Project>

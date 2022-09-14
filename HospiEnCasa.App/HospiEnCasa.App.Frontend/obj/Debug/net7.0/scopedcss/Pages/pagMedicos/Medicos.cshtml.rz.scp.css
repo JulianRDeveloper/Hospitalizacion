@@ -1,0 +1,30 @@
+.feather-16[b-4iyobb86f0]{
+    width: 16px;
+    height: 16px;
+    }
+    .feather-24[b-4iyobb86f0]{
+    width: 24px;
+    height: 24px;
+    }
+    .feather-32[b-4iyobb86f0]{
+    width: 32px;
+    height: 32px;
+    }
+
+    .btn[b-4iyobb86f0]{
+        border:black;
+        background-color:rgb(79, 50, 47);
+        cursor:pointer;
+        display:inline-block
+    }
+
+    .dv-cntr[b-4iyobb86f0]{
+        text-align:center;
+        height: 32px;
+    }
+    
+    .add-btn[b-4iyobb86f0]{
+        text-align: right;
+        margin-right: 4%;
+    }
+

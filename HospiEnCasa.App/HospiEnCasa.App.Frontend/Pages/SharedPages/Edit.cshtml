@@ -1,0 +1,252 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.EditModel
+@{
+}
+@if (@Model.Paciente != null){
+    <div id="wrapper">
+        <table border=4 id="table_detail" 
+            align=center cellpadding=15>
+            <tr><td id= "celda">
+    <br>
+    <h2 style="text-align:center">@Model.Paciente.Nombre @Model.Paciente.Apellidos</h2>
+    <br>
+    <form class="formy" method="post" id="f-fields">
+        <input type="hidden" asp-for="Paciente.Id" />
+
+        <divclass="form-row align-items-center">
+            <div class="form-group row" id="bloq">
+                <label class="col-sm-4 col-form-label" id="tag" asp-for="Paciente.Nombre"></label>
+                <div class="col-6">
+                    <input asp-for="Paciente.Nombre" class="form-control">
+                    <small id="HelpBlock" class="form-text text-muted">
+                        Digite nombres completos.
+                    </small>
+                    <span class="text-danger" asp-validation-for="Paciente.Nombre"></span>
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label" id="tag" asp-for="Paciente.Apellidos"></label>
+                <div class="col-6">
+                    <input asp-for="Paciente.Apellidos" class="form-control">
+                    <small id="HelpBlock" class="form-text text-muted">
+                        Digite apellidos completos.
+                    </small>
+                    <span class="text-danger" asp-validation-for="Paciente.Apellidos"></span>
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label" id="tag" asp-for="Paciente.NumeroTelefono"></label>
+                <div class="col-6">
+                    <input asp-for="Paciente.NumeroTelefono" class="form-control">
+                    <small id="HelpBlock" class="form-text text-muted">
+                        Digite Especifique el indicativo de la ciuad.
+                    </small>
+                    <span class="text-danger" asp-validation-for="Paciente.NumeroTelefono"></span>
+                </div>
+            </div>
+            <br>
+            @if(@Model.Paciente.Id<1){           
+                <div class="form-group row">
+                <label class="col-sm-4 col-form-label" id="tag" asp-for="Paciente.Genero"></label>
+                <div class="col-6">
+                    <select id="inputState" class="form-control">
+                        <option selected>Seleccione...</option>
+                        <option value="1">Femenino</option>
+                        <option value="0">Masculino</option>
+                        <option>...</option>
+                     </select>
+                    <span class="text-danger" asp-validation-for="Paciente.Genero"></span>
+                </div>
+            </div>
+            <br>
+            }    
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label" id="tag" asp-for="Paciente.Direccion"></label>
+                <div class="col-6">
+                    <input asp-for="Paciente.Direccion" class="form-control">
+                    <span class="text-danger" asp-validation-for="Paciente.Direccion"></span>
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label" id="tag" asp-for="Paciente.Ciudad"></label>
+                <div class="col-6">
+                    <input asp-for="Paciente.Ciudad" class="form-control">
+                    <small id="HelpBlock" class="form-text text-muted">
+                        Que viva ElLlano pariente!
+                    </small>
+                    <span class="text-danger" asp-validation-for="Paciente.Ciudad"></span>
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label" id="tag" asp-for="Paciente.FechaNacimiento"></label>
+                <div class="col-6">
+                    <input asp-for="Paciente.FechaNacimiento" class="form-control">
+                    <small id="HelpBlock" class="form-text text-muted">
+                        La hora no es es algo importante.
+                    </small>
+                    <span class="text-danger" asp-validation-for="Paciente.FechaNacimiento"></span>
+                </div>
+            </div>
+            <br>
+            <div class="dv-cntr">
+                <button type="submit" class="btn btn-secondary" id="btn-s" onclick="alert1()">
+                    <i class="feather-32" data-feather="user-check"></i>
+                </button>
+            </div>
+        </divclass>
+        <br>
+        <div class="dv-cntr">
+            <a asp-page="../Index" class="btn btn-secondary">Cancelar </a>
+        </div>
+        <br>
+    </form>
+    </td></tr>
+    </table>
+    </div>
+}
+@if (@Model.Medico != null){
+    <div id="wrapper">
+        <table border=4 id="table_detail" 
+            align=center cellpadding=15>
+            <tr><td id= "celda">
+    <br>
+    <h2 style="text-align:center">@Model.Medico.Nombre @Model.Medico.Apellidos</h2>
+    <br>
+    <form class="formy" method="post" id="f-fields">
+        <input type="hidden" asp-for="Paciente.Id" />
+
+        <divclass="form-row align-items-center">
+            <div class="form-group row" id="bloq">
+                <label class="col-sm-4 col-form-label" id="tag" asp-for="Paciente.Nombre"></label>
+                <div class="col-6">
+                    <input asp-for="Paciente.Nombre" class="form-control">
+                    <small id="HelpBlock" class="form-text text-muted">
+                        Digite nombres completos.
+                    </small>
+                    <span class="text-danger" asp-validation-for="Paciente.Nombre"></span>
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label" id="tag" asp-for="Paciente.Apellidos"></label>
+                <div class="col-6">
+                    <input asp-for="Paciente.Apellidos" class="form-control">
+                    <small id="HelpBlock" class="form-text text-muted">
+                        Digite apellidos completos.
+                    </small>
+                    <span class="text-danger" asp-validation-for="Paciente.Apellidos"></span>
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label" id="tag" asp-for="Paciente.NumeroTelefono"></label>
+                <div class="col-6">
+                    <input asp-for="Paciente.NumeroTelefono" class="form-control">
+                    <small id="HelpBlock" class="form-text text-muted">
+                        Digite Especifique el indicativo de la ciuad.
+                    </small>
+                    <span class="text-danger" asp-validation-for="Paciente.NumeroTelefono"></span>
+                </div>
+            </div>
+            <br>
+            @if(@Model.Paciente.Id<1){           
+                <div class="form-group row">
+                <label class="col-sm-4 col-form-label" id="tag" asp-for="Paciente.Genero"></label>
+                <div class="col-6">
+                    <select id="inputState" class="form-control">
+                        <option selected>Seleccione...</option>
+                        <option value="1">Femenino</option>
+                        <option value="0">Masculino</option>
+                        <option>...</option>
+                     </select>
+                    <span class="text-danger" asp-validation-for="Paciente.Genero"></span>
+                </div>
+            </div>
+            <br>
+            }    
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label" id="tag" asp-for="Paciente.Direccion"></label>
+                <div class="col-6">
+                    <input asp-for="Paciente.Direccion" class="form-control">
+                    <span class="text-danger" asp-validation-for="Paciente.Direccion"></span>
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label" id="tag" asp-for="Paciente.Ciudad"></label>
+                <div class="col-6">
+                    <input asp-for="Paciente.Ciudad" class="form-control">
+                    <small id="HelpBlock" class="form-text text-muted">
+                        Que viva ElLlano pariente!
+                    </small>
+                    <span class="text-danger" asp-validation-for="Paciente.Ciudad"></span>
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label" id="tag" asp-for="Paciente.FechaNacimiento"></label>
+                <div class="col-6">
+                    <input asp-for="Paciente.FechaNacimiento" class="form-control">
+                    <small id="HelpBlock" class="form-text text-muted">
+                        La hora no es es algo importante.
+                    </small>
+                    <span class="text-danger" asp-validation-for="Paciente.FechaNacimiento"></span>
+                </div>
+            </div>
+            <br>
+            <div class="dv-cntr">
+                <button type="submit" class="btn btn-secondary" id="btn-s" onclick="alert1()">
+                    <i class="feather-32" data-feather="user-check"></i>
+                </button>
+            </div>
+        </divclass>
+        <br>
+        <div class="dv-cntr">
+            <a asp-page="../Index" class="btn btn-secondary">Cancelar </a>
+        </div>
+        <br>
+    </form>
+    </td></tr>
+    </table>
+    </div>
+}
+
+<style>
+    .dv-cntr {
+        text-align: center;
+        height: 32px;
+    }
+
+    @* .form-group {
+        margin-left: 23%;
+    } *@
+
+    #tag {
+        text-align: right;
+    }
+
+    #formy {
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+
+    #btn-s {
+        width: 100px;
+    }
+    #celda{
+        column-width: 650px;
+    }
+    #wrapper {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+    }
+</style>
+<script>
+    
+</script>

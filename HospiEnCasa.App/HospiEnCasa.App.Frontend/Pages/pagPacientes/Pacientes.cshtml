@@ -1,0 +1,46 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.PacientesModel
+@{
+}
+<br>
+<h2 class="dv-cntr"><i class="feather-32" data-feather="file-text"></i>PACIENTES</h2>
+<br>
+<div class="add-btn">
+    <a asp-page="..\SharedPages\Edit" class="btn btn-secondary">Nuevo Paciente</a>
+</div>
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th><i class="feather-16" data-feather="user"></i> Nombre</th>
+        <th><i class="feather-16" data-feather="truck"></i> Direccion</th>
+        <th><i class="feather-16" data-feather="map-pin"></i> Ciudad</th>
+        <th><i class="feather-16" data-feather="calendar"></i> Fecha de Nacimiento</th>
+  </tr>
+    @foreach (var paciente in Model.ListPacientes){
+        <tr>
+            <divclass="form-row align-items-center">
+            <td>@paciente.Id</td>
+            <td>@paciente.Nombre @paciente.Apellidos</td>
+            <td>@paciente.Direccion</td>
+            <td>@paciente.Ciudad</td>
+            <td>@paciente.FechaNacimiento</td>
+            <td>
+                <a class="btn btn-secondary table-btn" style="display:inline-block" asp-page="..\SharedPages\Details" asp-route-Id="@paciente.Id">
+                <i class="feather-24" data-feather="eye" style="display:inline-block"></i>
+                </a>
+            </td>
+            <td>
+                <a class="btn btn-secondary table-btn" style="display:inline-block" asp-page="..\SharedPages\Edit" asp-route-Id="@paciente.Id">
+                <i class="feather-24" data-feather="edit" style="display:inline-block"></i>
+                </a>
+            </td>
+        </tr>
+    }
+    </divclass>
+</table>
+<br><br>
+<div class="dv-cntr">
+<a asp-page="..\Index" class="btn btn-secondary"><i class="feather-32" data-feather="chevrons-left"></i></a>
+</div>
+
+

@@ -1,0 +1,40 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.NursesModel
+@{
+}
+<br>
+<h2 class="dv-cntr"><i class="feather-32" data-feather="file-text"></i>ENFERMER@S</h2>
+<br>
+<div class="add-btn">
+    <button asp-page="..\SharedPages\Details" class="btn btn-secondary">Agregar</button>
+</div>
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th><i class="feather-16" data-feather="user"></i> Nombre</th>
+        <th><i class="feather-16" data-feather="credit-card"></i> Tarjeta Profesional</th>
+        <th><i class="feather-16" data-feather="calendar"></i> Horas Laborables</th>
+  </tr>
+    @foreach (var nurse in Model.ListNurses){
+        <tr>
+            <td>@nurse.Id</td>
+            <td>@nurse.Nombre @nurse.Apellidos</td>
+            <td>@nurse.TarjetaProfesional</td>
+            <td>@nurse.HorasLaborables</td>
+             <td>
+                <a class="btn btn-secondary table-btn" style="display:inline-block" asp-page="..\SharedPages\Details" asp-route-Id="@nurse.Id">
+                <i class="feather-24" data-feather="eye" style="display:inline-block"></i>
+                </a>
+            </td>
+            <td>
+                <a class="btn btn-secondary table-btn" style="display:inline-block" asp-page="..\SharedPages\Edit" asp-route-nurseId="@nurse.Id">
+                <i class="feather-24" data-feather="edit" style="display:inline-block"></i>
+                </a>
+            </td>
+        </tr>
+    }
+</table>
+<br><br>
+<div class="dv-cntr">
+<a asp-page="..\Index" class="btn btn-secondary"><i class="feather-32" data-feather="chevrons-left"></i></a>
+</div>

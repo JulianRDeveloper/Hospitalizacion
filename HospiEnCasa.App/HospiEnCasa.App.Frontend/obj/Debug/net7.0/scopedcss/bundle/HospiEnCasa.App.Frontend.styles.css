@@ -1,0 +1,216 @@
+/* _content/HospiEnCasa.App.Frontend/Pages/pagEnfermeras/Nurses.cshtml.rz.scp.css */
+.feather-16[b-7zghzo46u5]{
+    width: 16px;
+    height: 16px;
+    }
+    .feather-24[b-7zghzo46u5]{
+    width: 24px;
+    height: 24px;
+    }
+    .feather-32[b-7zghzo46u5]{
+    width: 32px;
+    height: 32px;
+    }
+
+    .btn[b-7zghzo46u5]{
+        border:black;
+        background-color:rgb(79, 50, 47);
+        cursor:pointer;
+        display:inline-block
+    }
+
+    .dv-cntr[b-7zghzo46u5]{
+        text-align:center;
+        height: 32px;
+    }
+    
+    .add-btn[b-7zghzo46u5]{
+        text-align: right;
+        margin-right: 9%;
+    }
+/* _content/HospiEnCasa.App.Frontend/Pages/pagFamiliares/Familares.cshtml.rz.scp.css */
+.feather-16[b-0j7td7isxx]{
+    width: 16px;
+    height: 16px;
+    }
+    .feather-24[b-0j7td7isxx]{
+    width: 24px;
+    height: 24px;
+    }
+    .feather-32[b-0j7td7isxx]{
+    width: 32px;
+    height: 32px;
+    }
+
+    .btn[b-0j7td7isxx]{
+        border:black;
+        background-color:rgb(79, 50, 47);
+        cursor:pointer;
+        display:inline-block
+    }
+
+    .dv-cntr[b-0j7td7isxx]{
+        text-align:center;
+        height: 32px;
+    }
+
+    .add-btn[b-0j7td7isxx]{
+        text-align: right;
+        margin-right: 15%;
+    }
+
+    
+/* _content/HospiEnCasa.App.Frontend/Pages/pagMedicos/Medicos.cshtml.rz.scp.css */
+.feather-16[b-4iyobb86f0]{
+    width: 16px;
+    height: 16px;
+    }
+    .feather-24[b-4iyobb86f0]{
+    width: 24px;
+    height: 24px;
+    }
+    .feather-32[b-4iyobb86f0]{
+    width: 32px;
+    height: 32px;
+    }
+
+    .btn[b-4iyobb86f0]{
+        border:black;
+        background-color:rgb(79, 50, 47);
+        cursor:pointer;
+        display:inline-block
+    }
+
+    .dv-cntr[b-4iyobb86f0]{
+        text-align:center;
+        height: 32px;
+    }
+    
+    .add-btn[b-4iyobb86f0]{
+        text-align: right;
+        margin-right: 4%;
+    }
+
+/* _content/HospiEnCasa.App.Frontend/Pages/pagPacientes/Pacientes.cshtml.rz.scp.css */
+.feather-16[b-9ukdv03sz0]{
+    width: 16px;
+    height: 16px;
+    }
+    .feather-24[b-9ukdv03sz0]{
+    width: 24px;
+    height: 24px;
+    }
+    .feather-32[b-9ukdv03sz0]{
+    width: 32px;
+    height: 32px;
+    }
+
+    .btn[b-9ukdv03sz0]{
+        border:black;
+        background-color:rgb(79, 50, 47);
+        cursor:pointer;
+        display:inline-block
+    }
+
+    .dv-cntr[b-9ukdv03sz0]{
+        text-align:center;
+        height: 40px;
+    }
+
+    .add-btn[b-9ukdv03sz0]{
+        text-align: right;
+        margin-right: 2%;
+    }
+/* _content/HospiEnCasa.App.Frontend/Pages/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-vknwb4m9cw] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+
+}
+
+a[b-vknwb4m9cw] {
+  color: #0077cc;
+}
+
+.btn-primary[b-vknwb4m9cw] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-vknwb4m9cw], .nav-pills .show > .nav-link[b-vknwb4m9cw] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-vknwb4m9cw] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-vknwb4m9cw] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-vknwb4m9cw] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-vknwb4m9cw] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-vknwb4m9cw] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+.pb-3[b-vknwb4m9cw] {
+  background-image: url(C:\Hospitalizacion\HospiEnCasa.App\HospiEnCasa.App.Frontend\Pages\hospitalizacion-hogar.jpg);
+  /* background-color: #1861ac; */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.feather-16[b-vknwb4m9cw]{
+  width: 16px;
+  height: 16px;
+  }
+  .feather-24[b-vknwb4m9cw]{
+  width: 24px;
+  height: 24px;
+  }
+  .feather-32[b-vknwb4m9cw]{
+  width: 32px;
+  height: 32px;
+  }
+
+  .nav-item[b-vknwb4m9cw]{
+    font-size: 16px;
+  }
+
+  .navbar-brand[b-vknwb4m9cw]{
+    font-size: 32px;
+  }
+
+  .nav-item:hover[b-vknwb4m9cw]{
+background-color:lightslategray;
+color: white;
+  }
+
+
+  /* no funciona
+  .navbar-brand:hover{ 
+    background-color:lightslategray;
+    color: white;
+  } */
+  

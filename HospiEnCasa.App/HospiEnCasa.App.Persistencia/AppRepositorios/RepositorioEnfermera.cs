@@ -39,21 +39,21 @@ namespace HospiEnCasa.App.Persistencia
             return (IEnumerable<Enfermera>)_appContext.Enfermeras;
         }
 
-        Enfermera IRepositorioEnfermera.GetEnfermera(int idEnfermera)
+        Enfermera IRepositorioEnfermera.GetEnfermera(int Id)
         {
-            return _appContext.Enfermeras.FirstOrDefault(p=> p.Id == idEnfermera);
+            return _appContext.Enfermeras.FirstOrDefault(p=> p.Id == Id);
         }
 
         Enfermera IRepositorioEnfermera.UpdateEnfermera(Enfermera enfermera)
         {
-            var EnfermeraEncontrado = _appContext.Enfermeras.FirstOrDefault(p=> p.Id == enfermera.Id);
-            if(EnfermeraEncontrado!=null){
+            var EnfermeraEncontrado = _appContext.Enfermeras.SingleOrDefault(p=> p.Id == enfermera.Id);
+            if(enfermera!=null){
                 EnfermeraEncontrado.Nombre=enfermera.Nombre;
                 EnfermeraEncontrado.Apellidos=enfermera.Apellidos;
                 EnfermeraEncontrado.NumeroTelefono=enfermera.NumeroTelefono;
-                EnfermeraEncontrado.Genero=enfermera.Genero;
+                // EnfermeraEncontrado.Genero=enfermera.Genero;
 
-                EnfermeraEncontrado.TarjetaProfesional=enfermera.TarjetaProfesional;
+                // EnfermeraEncontrado.TarjetaProfesional=enfermera.TarjetaProfesional;
                 EnfermeraEncontrado.HorasLaborables=enfermera.HorasLaborables;
 
                 _appContext.SaveChanges();

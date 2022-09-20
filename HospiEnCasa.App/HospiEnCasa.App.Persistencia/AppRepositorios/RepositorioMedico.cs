@@ -39,22 +39,22 @@ namespace HospiEnCasa.App.Persistencia
             return (IEnumerable<Medico>)_appContext.Medicos;
         }
 
-        Medico IRepositorioMedico.GetMedico(int idMedico)
+        Medico IRepositorioMedico.GetMedico(int Id)
         {
-            return _appContext.Medicos.FirstOrDefault(p=> p.Id == idMedico);
+            return _appContext.Medicos.FirstOrDefault(p=> p.Id == Id);
         }
 
         Medico IRepositorioMedico.UpdateMedico(Medico medico)
         {
-            var MedicoEncontrado = _appContext.Medicos.SingleOrDefault(p=> p.Id == medico.Id);
-            if(MedicoEncontrado!=null){
+            var MedicoEncontrado = _appContext.Medicos.SingleOrDefault(r=> r.Id == medico.Id);
+            if(medico!=null){
                 MedicoEncontrado.Nombre=medico.Nombre;
                 MedicoEncontrado.Apellidos=medico.Apellidos;
                 MedicoEncontrado.NumeroTelefono=medico.NumeroTelefono;
-                MedicoEncontrado.Genero=medico.Genero;
+                //MedicoEncontrado.Genero=medico.Genero;
                 MedicoEncontrado.Especialidad=medico.Especialidad;
-                MedicoEncontrado.Codigo=medico.Codigo;
-                MedicoEncontrado.RegistroRethus=medico.RegistroRethus;
+                //MedicoEncontrado.Codigo=medico.Codigo;
+                //MedicoEncontrado.RegistroRethus=medico.RegistroRethus;
                 
                 _appContext.SaveChanges();
             }

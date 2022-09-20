@@ -2,45 +2,183 @@
 @model HospiEnCasa.App.Frontend.Pages.PacientesModel
 @{
 }
-<br>
-<h2 class="dv-cntr"><i class="feather-32" data-feather="file-text"></i>PACIENTES</h2>
-<br>
-<div class="add-btn">
-    <a asp-page="..\SharedPages\Edit" class="btn btn-secondary">Nuevo Paciente</a>
-</div>
-<table class="table table-striped">
-    <tr>
-        <th>ID</th>
-        <th><i class="feather-16" data-feather="user"></i> Nombre</th>
-        <th><i class="feather-16" data-feather="truck"></i> Direccion</th>
-        <th><i class="feather-16" data-feather="map-pin"></i> Ciudad</th>
-        <th><i class="feather-16" data-feather="calendar"></i> Fecha de Nacimiento</th>
-  </tr>
-    @foreach (var paciente in Model.ListPacientes){
-        <tr>
-            <divclass="form-row align-items-center">
-            <td>@paciente.Id</td>
-            <td>@paciente.Nombre @paciente.Apellidos</td>
-            <td>@paciente.Direccion</td>
-            <td>@paciente.Ciudad</td>
-            <td>@paciente.FechaNacimiento</td>
-            <td>
-                <a class="btn btn-secondary table-btn" style="display:inline-block" asp-page="..\SharedPages\Details" asp-route-Id="@paciente.Id">
-                <i class="feather-24" data-feather="eye" style="display:inline-block"></i>
-                </a>
-            </td>
-            <td>
-                <a class="btn btn-secondary table-btn" style="display:inline-block" asp-page="..\SharedPages\Edit" asp-route-Id="@paciente.Id">
-                <i class="feather-24" data-feather="edit" style="display:inline-block"></i>
-                </a>
-            </td>
-        </tr>
-    }
-    </divclass>
-</table>
-<br><br>
-<div class="dv-cntr">
-<a asp-page="..\Index" class="btn btn-secondary"><i class="feather-32" data-feather="chevrons-left"></i></a>
-</div>
+@if(@Model.ListPacientes!=null){
+    <div class="container">
+        <br>
+        <div class="row">        
+            <h2 id="dv-cntr"><i class="feather-32" data-feather="file-text"></i>PACIENTES</h2>
+        </div>
+        <br>
+        <div>
+            <form method="post">
+                <div class="row">                
+                    <div class="col-sm-8" style="padding-left: 30%;" id="marg-der">
+                        <div class="form-group">
+                            <input type="text" class="form-select" name="busqueda"  style="width: 400px;">
+                            <small style="text-align: center;" id="marg-der" class="form-text text-muted">Realice busquedas por Nombres y/o Apellidos.</small>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <button type="submit" for:"findField" class="btn btn-secondary"><i class="feather-24" data-feather="search"></i></button>
+                    </div>
+                    <div class="col-sm-2">
+                        <button class="btn btn-secondary" onClick="window.location.reload();"><i class="feather-24" data-feather="refresh-ccw" style="display:inline-block"></i>Lista Completa</button>
+                    </div>
+                    <div class="col-sm -1">
+                        <div class="form-group">
+                            <a asp-page="\EditPa" class="btn btn-secondary"><i class="feather-32" data-feather="user-plus"></i></a>
+                            <small id="HelpBlock" class="form-text text-muted">Paciente</small>
+                        </div>
+                    </div>       
+                </div>
+            </form>
+        </div>
+        <br>
+        <div>
+            <table class="table table-striped">
+                <tr>
+                    <th>ID</th>
+                    <th><i class="feather-16" data-feather="user"></i> Nombre</th>
+                    <th><i class="feather-16" data-feather="truck"></i> Direccion</th>
+                    <th><i class="feather-16" data-feather="map-pin"></i> Ciudad</th>
+                    <th><i class="feather-16" data-feather="calendar"></i> Fecha de Nacimiento</th>
+                    <th>Ver</th>
+                    <th>Editar</th>
+                    <th>Sig.Vit</th>
+                </tr>
+                @foreach (var paciente in Model.ListPacientes)
+                {
+                    int pacienteId= @paciente.Id;  
+                    <tr>
+                        <div class="form-row align-items-center">
+                            <td>@paciente.Id</td>
+                            <td>@paciente.Nombre @paciente.Apellidos</td>
+                            <td>@paciente.Direccion</td>
+                            <td>@paciente.Ciudad</td>
+                            <td>@paciente.FechaNacimiento</td>
+                            @* <td>
+                                <button type="button" class="btn btn-secondary openBtn" id="btn-modal" data-bs-toggle="modal" 
+                                        data-bs-target="#exampleModal">VerNOdal</button>
+                            </td> *@
+                            <td>
+                                <a class="btn btn-secondary table-btn" style="display:inline-block" asp-page="..\SharedPages\Details"
+                                        asp-route-Id="@paciente.Id">
+                                        <i class="feather-24" data-feather="eye" style="display:inline-block"></i>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="btn btn-secondary table-btn" style="display:inline-block" asp-page="\EditPa"
+                                asp-route-Id="@paciente.Id">
+                                    <i class="feather-24" data-feather="edit" style="display:inline-block"></i>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="btn btn-secondary table-btn" asp-page="\SVs"
+                                asp-route-Id="@paciente.Id">
+                                <i class="feather-24" data-feather="activity" style="display:inline-block"></i></a>
+                            </td>                         
+                        </div>
+                    </tr>
+                }    
+            </table>
+        </div>
+        <br><br>
+        <div id="dv-cntr">
+            <a asp-page="..\Index" class="btn btn-secondary"><i class="feather-32" data-feather="chevrons-left"></i></a>
+        </div>
+    </div>
+}
 
+@if(@Model.FindedPacientes!=null){
+    <div class="container">
+        <br>
+        <div class="row">        
+            <h2 id="dv-cntr"><i class="feather-32" data-feather="file-text"></i>PACIENTES</h2>
+        </div>
+        <br>
+        <div>
+            <form method="post" id="myFormy">
+                
+            </form>
+        </div>
+        <br>
+        <div>
+            <table class="table table-striped">
+                <tr>
+                    <th>ID</th>
+                    <th><i class="feather-16" data-feather="user"></i> Nombre</th>
+                    <th><i class="feather-16" data-feather="truck"></i> Direccion</th>
+                    <th><i class="feather-16" data-feather="map-pin"></i> Ciudad</th>
+                    <th><i class="feather-16" data-feather="calendar"></i> Fecha de Nacimiento</th>
+                    <th>Ver</th>
+                    <th>Editar</th>
+                    <th>Sig.Vit</th>
+                </tr>
+                @foreach (var paciente in Model.FindedPacientes)
+                {
+                    int pacienteId= @paciente.Id;  
+                    <tr>
+                        <div class="form-row align-items-center">
+                            <td>@paciente.Id</td>
+                            <td>@paciente.Nombre @paciente.Apellidos</td>
+                            <td>@paciente.Direccion</td>
+                            <td>@paciente.Ciudad</td>
+                            <td>@paciente.FechaNacimiento</td>
+                            @* <td>
+                                <button type="button" class="btn btn-secondary openBtn" id="btn-modal" data-bs-toggle="modal" 
+                                        data-bs-target="#exampleModal">VerNOdal</button>
+                            </td> *@
+                            <td>
+                                <a class="btn btn-secondary table-btn" style="display:inline-block" asp-page="..\SharedPages\Details"
+                                        asp-route-Id="@paciente.Id">
+                                        <i class="feather-24" data-feather="eye" style="display:inline-block"></i>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="btn btn-secondary table-btn" style="display:inline-block" asp-page="\EditPa"
+                                asp-route-Id="@paciente.Id">
+                                    <i class="feather-24" data-feather="edit" style="display:inline-block"></i>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="btn btn-secondary table-btn" asp-page="\SVs"
+                                asp-route-Id="@paciente.Id">
+                                <i class="feather-24" data-feather="activity" style="display:inline-block"></i></a>
+                            </td>                         
+                        </div>
+                    </tr>
+                }    
+            </table>
+        </div>
+        <br><br>
+        <div id="dv-cntr">
+            <a asp-page="..\Index" class="btn btn-secondary"><i class="feather-32" data-feather="chevrons-left"></i></a>
+        </div>
+    </div>
+}
 
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+    @* @if(@Model.Paciente!=null){ *@
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <iframe id="frame-modal" width="600" height="400" src="..\SharedPages\Details"></iframe>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    @* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> *@
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="text-align: center;">Listo</button>
+                </div>
+            </div>
+        </div>    
+    @* } *@
+    </div>
+  

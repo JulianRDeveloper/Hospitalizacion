@@ -1,6 +1,7 @@
 using System;
 using HospiEnCasa.App.Dominio;
 using System.ComponentModel.DataAnnotations;
+// using System.Collections.Generic;
 
 
 namespace HospiEnCasa.App.Dominio{
@@ -26,7 +27,7 @@ namespace HospiEnCasa.App.Dominio{
         public DateTime FechaNacimiento { get; set; }
         
 
-        public List<SignoVital> SignosVitales {get;set;} //Aregado por mi
+        public System.Collections.Generic.List<SignoVital> SignosVitales {get;set;} //Aregado por mi
         public FamiliarDesignado Familiar {get; set;}
         public Enfermera Enfermera {get;set;}
         public Medico Medico {get; set;}

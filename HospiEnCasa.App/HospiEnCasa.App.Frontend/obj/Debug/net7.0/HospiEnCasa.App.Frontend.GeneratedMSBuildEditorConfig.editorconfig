@@ -23,6 +23,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/pagEnfermeras/EditEnf.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGFnRW5mZXJtZXJhc1xFZGl0RW5mLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/pagFamiliares/EditFam.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGFnRmFtaWxpYXJlc1xFZGl0RmFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/pagMedicos/EditMed.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGFnTWVkaWNvc1xFZGl0TWVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/pagPacientes/EditPa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGFnUGFjaWVudGVzXEVkaXRQYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/pagPacientes/SVs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGFnUGFjaWVudGVzXFNWcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/Personas/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyc29uYXNcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -33,10 +53,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/SharedPages/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkUGFnZXNcRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/SharedPages/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkUGFnZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/Pages/Shared/_ValidationScriptsPartial.cshtml]

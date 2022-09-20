@@ -12,8 +12,9 @@
     }
 
     .btn{
-        border:black;
-        background-color:rgb(79, 50, 47);
+        border-color:black;
+        border: 2;
+        /* background-color:rgb(79, 50, 47); */
         cursor:pointer;
         display:inline-block
     }

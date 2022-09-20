@@ -8,34 +8,40 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/HospiEnCasa.App.Frontend.styles.css" asp-append-version="true" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    @* para evitar el catching browser modo debug *@
+    <link rel="stylesheet" href="css/mycss.css?v=<%=DateTime.Now%>" />
+
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">Hospitalizacion En Casa</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="navbar-buttons">
                     <ul class="navbar-nav flex-grow-1">
                         <li> </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index"><i data-feather="home"></i>  Home</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/Index"><i data-feather="home" color="white"></i>  Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/pagPacientes/Pacientes"><i data-feather="users"></i> Lista de Pacientes</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/pagPacientes/Pacientes"><i data-feather="users"></i> Lista de Pacientes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/pagMedicos/Medicos"><i data-feather="users"></i>  Lista de Medicos</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/pagMedicos/Medicos"><i data-feather="users"></i>  Lista de Medicos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/pagEnfermeras/Nurses"><i data-feather="users"></i>  Lista de Enfermeras</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/pagEnfermeras/Nurses"><i data-feather="users"></i>  Lista de Enfermeras</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/pagFamiliares/Familares"><i data-feather="users"></i>  Lista de Familiares</a>
+                            <a class="nav-link text-white" asp-area="" asp-page="/pagFamiliares/Familares"><i data-feather="users"></i>  Lista de Familiares</a>
                         </li>
+                        @* <li class="nav-item">
+                            <button type="button" class="close"> <i data-feather="x-circle"></i>  Close App</button>
+                        </li> *@
                     </ul>
                 </div>
             </div>
@@ -53,9 +59,9 @@
         </div>
     </footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    @* <script src="~/lib/jquery/dist/jquery.min.js"></script> *@
     <script src="~/lib/feather-icons/feather.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.17.0/feather.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.17.0/feather.min.js"
         asp-fallback-src="~/lib/feather-icons/feather.min.js"
         asp-fallback-test="feather"
         integrity="sha256-XcN55BkQ8zLrLvJmpE4nPHW+zYKGwW10JaYd7bq49gQ="
@@ -69,10 +75,9 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="JS/scripts.js"></script>
     
-    
-    
-    @await RenderSectionAsync("Scripts", required: false)
+    @* Script para tablas expandiblas *@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    @* @await RenderSectionAsync("Scripts", required: false) *@
 </body>
 </html>

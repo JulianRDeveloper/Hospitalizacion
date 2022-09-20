@@ -20,12 +20,17 @@ class Program{
         //BuscarEnfermera(8);
         //AddFamiliar();
         //BuscarFamiliar(9);
-        //AsignarMedico(6,7);
+        //AsignarMedico(15,20);
         //AsignarEnfermera(6,8);
         //AsignarFamiliar(6,9);
         //GetAllPacientes();
-        AddPacienteFull();
+        //AddPacienteFull();
         //AddSignosPaciente(12);
+        // AddHistoriaPaciente(11);
+        // AddSugerenciasCuidado(11);
+        //ListMalePacientes();
+        //ListPacientesRC();
+        FindNamesPaciente("Julian");
         
     }
     private static void AddPaciente(){
@@ -45,29 +50,30 @@ class Program{
 
     private static void AddPacienteFull(){
         var paciente = new Paciente{
-            Nombre= "Lina",
-            Apellidos= "Romero",
-            NumeroTelefono= "(8)6700915",
+            Nombre= "Isabel Carmenza",
+            Apellidos= "Zuluaga Moreno",
+            NumeroTelefono= "(6)6678455",
             Genero= Genero.femenino,
             Direccion= "Barrio El Buque, Norte",
-            Longitud= 2.03531F,
-            Latitud= -45.26150F,
+            Longitud= 6.09153F,
+            Latitud= -46.5220F,
             Ciudad= "Villavicencio",
-            FechaNacimiento= new DateTime(1990, 02, 6),
+            FechaNacimiento= new DateTime(1968, 10, 16),
             SignosVitales= new List<SignoVital> {
-                new SignoVital{FechaHora= new DateTime(2022,09,9,10,20,0),Valor=29,Signo=TipoSigno.TemperaturaCorporal},
-                new SignoVital{FechaHora= new DateTime(2022,09,9,10,22,0),Valor=94,Signo=TipoSigno.SaturacionOxigeno},
-                new SignoVital{FechaHora= new DateTime(2021,09,9,10,25,0),Valor=88,Signo=TipoSigno.FrecuenciaCardiaca}
+                new SignoVital{FechaHora= new DateTime(2022,09,17,20,08,0),Valor=28,Signo=TipoSigno.TemperaturaCorporal},
+                new SignoVital{FechaHora= new DateTime(2022,09,17,20,11,0),Valor=9,Signo=TipoSigno.SaturacionOxigeno},
+                new SignoVital{FechaHora= new DateTime(2021,09,17,20,16,0),Valor=95,Signo=TipoSigno.FrecuenciaCardiaca}
             },
             Historia= new Historia{
                 Diagnostico= "COVID",
                 Entorno="En Casa",
                 Sugerencias= new List<SugerenciaCuidado> {
-                    new SugerenciaCuidado{FechaHora= new DateTime(2022,09,9,10,35,0),Descripcion="Actualizar SVs cada 4horas."},
-                    new SugerenciaCuidado{FechaHora= new DateTime(2022,09,9,10,37,0),Descripcion="Elevacion de la cama 80°"}
+                    new SugerenciaCuidado{FechaHora= new DateTime(2022,09,17,20,19,0),Descripcion="Actualizar SVs cada 2horas."},
+                    new SugerenciaCuidado{FechaHora= new DateTime(2022,09,17,20,19,0),Descripcion="Elevacion de la cama 100°"}
             }}
         };
         _repoPaciente.AddPaciente(paciente);
+        Console.WriteLine("Paciente agregado");
     }
     private static void BuscarPaciente(int idPaciente){
         var paciente= _repoPaciente.GetPaciente(idPaciente);
@@ -138,6 +144,58 @@ class Program{
             _repoPaciente.UpdatePaciente(paciente);
         }
     }
+
+    private static void AddHistoriaPaciente(int idPaciente){
+        var paciente= _repoPaciente.GetPaciente(idPaciente);
+        if(paciente!=null){
+            if(paciente.Historia==null){
+                paciente.Historia= new Historia{
+                Diagnostico= "COVID",
+                Entorno="En Casa",
+                Sugerencias= new List<SugerenciaCuidado> {
+                    new SugerenciaCuidado{FechaHora= new DateTime(2022,09,17,18,08,0),Descripcion="Actualizar SVs cada 8horas."},
+                    new SugerenciaCuidado{FechaHora= new DateTime(2022,09,17,18,08,0),Descripcion="Elevacion de la cama 120°"},
+                    new SugerenciaCuidado{FechaHora= new DateTime(2022,09,17,18,08,0),Descripcion="Situar en espacio Ventilado"}
+                }   
+                };
+            }
+            _repoPaciente.UpdatePaciente(paciente);
+        }
+    }
+
+    private static void AddSugerenciasCuidado(int idPaciente){
+        var paciente = _repoPaciente.GetPaciente(idPaciente);
+        if(paciente!=null){
+            if(paciente.Historia.Sugerencias==null){
+                paciente.Historia.Sugerencias= new List<SugerenciaCuidado> {
+                    new SugerenciaCuidado{FechaHora= new DateTime(2022,09,17,18,08,0),Descripcion="Permanente Monitoreo Sat.Ox."},
+                    new SugerenciaCuidado{FechaHora= new DateTime(2022,09,17,18,08,0),Descripcion="Antiflamatorio C/da 8H"},
+                    new SugerenciaCuidado{FechaHora= new DateTime(2022,09,17,18,08,0),Descripcion="Situar en espacio Ventilado"}
+                };
+            }else{
+                paciente.Historia.Sugerencias.Add(new SugerenciaCuidado{FechaHora= new DateTime(2022,09,17,18,08,0),Descripcion="Permanente Monitoreo Sat.Ox."});
+                paciente.Historia.Sugerencias.Add(new SugerenciaCuidado{FechaHora= new DateTime(2022,09,17,18,08,0),Descripcion="Antiflamatorio C/da 8H"});
+                paciente.Historia.Sugerencias.Add(new SugerenciaCuidado{FechaHora= new DateTime(2022,09,17,18,08,0),Descripcion="Situar en espacio Ventilado"});
+            }
+            _repoPaciente.UpdatePaciente(paciente);
+        }
+        }
+
+    private static void ListMalePacientes(){
+        var males = _repoPaciente.GetMalePacientes();
+        foreach (Paciente p in males){
+            Console.WriteLine(p.Nombre+" "+p.Apellidos);
+        }
+    }
+
+    private static void ListPacientesRC(){
+        var fcs = _repoPaciente.GetPacientesRC();
+        foreach (Paciente p in fcs)
+        {
+            Console.WriteLine(p.Nombre+" "+p.Apellidos+" "+p.SignosVitales);
+        }
+    }
+    
     private static void BuscarFamiliar(int idFamiliar){
         var familiar = _repoFamiliar.GetFamiliar(idFamiliar);
         Console.WriteLine("Familiar : "+familiar.Nombre+" "+familiar.Apellidos+" / Parentesco: "+familiar.Parentesco);
@@ -167,6 +225,14 @@ class Program{
             Console.WriteLine(paciente.FechaNacimiento);
         }
         //Console.WriteLine(pacientes);
+    }
+
+    private static void FindNamesPaciente(string texto){
+        var pacientes= _repoPaciente.FiltroNombres(texto);
+        foreach (var paciente in pacientes){
+            Console.WriteLine("Id | "+paciente.Nombre+" | "+paciente.Apellidos);
+            Console.WriteLine(paciente.Id+" | "+paciente.Nombre+" | "+paciente.Apellidos);            
+        }
     }
 
 }

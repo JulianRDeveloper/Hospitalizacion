@@ -1,74 +1,65 @@
 ﻿@page
 @model HospiEnCasa.App.Frontend.Pages.DetailsModel
 @{
+
 }
 @if(@Model.Paciente!=null){
     <div id="wrapper">
-        <table border=4 id="table_detail" 
-            align=center cellpadding=20>
-
-            <tr class="titulo"><td> @Model.Paciente.Nombre @Model.Paciente.Apellidos</td><td style="text-align:center">@Model.Paciente.Id</td></tr>
-            <tr><td> No.Telefonico: @Model.Paciente.NumeroTelefono</td></tr>
-            <tr><td> Genero: @Model.Paciente.Genero</td></tr>
-            <tr><td> Direccion: @Model.Paciente.Direccion - @Model.Paciente.Ciudad</td></tr>
-            <tr><td> Ubicacion: LAT:@Model.Paciente.Latitud - LON:@Model.Paciente.Longitud</td></tr>
-            <tr><td> Fecha Nacimiento: @Model.Paciente.FechaNacimiento</td></tr>
-            
+        <table border=4 id="table_detail" align=center cellpadding=20>
+            <tr class="titulo"><td><i class="feather-32" data-feather="chevrons-right"></i>    @Model.Paciente.Nombre @Model.Paciente.Apellidos</td><td style="text-align:center">@Model.Paciente.Id</td></tr>
+            <tr><td>    <i class="feather-32" data-feather="phone-incoming"></i>    No.Telefonico: @Model.Paciente.NumeroTelefono</td></tr>
+            <tr><td>    <i class="feather-32" data-feather="triangle"></i>    Genero: @Model.Paciente.Genero</td></tr>
+            <tr><td>    <i class="feather-32" data-feather="truck"></i>    Direccion: @Model.Paciente.Direccion - @Model.Paciente.Ciudad</td></tr>
+            <tr><td>    <i class="feather-32" data-feather="map-pin"></i>    Ubicacion: LAT:@Model.Paciente.Latitud - LON:@Model.Paciente.Longitud</td></tr>
+            <tr><td>    <i class="feather-32" data-feather="calendar"></i>    Fecha Nacimiento: @Model.Paciente.FechaNacimiento</td></tr>
         </table>
     </div>
+    
     }
 
 @if(@Model.Medico!=null){
     <div id="wrapper">
-        <table border=4 id="table_detail" 
-            align=center cellpadding=15>
-
-            <tr class="titulo"><td> @Model.Medico.Nombre @Model.Medico.Apellidos</td><td style="text-align:center">@Model.Medico.Id</td></tr>
-            <tr><td> Especialidad: @Model.Medico.Especialidad</td></tr>
-            <tr><td> Codigo Interno: @Model.Medico.Codigo</td></tr>
-            <tr><td> Registro RETHUS: @Model.Medico.RegistroRethus</td></tr>
-            <tr><td> Genero: @Model.Medico.Genero</td></tr>
-            <tr><td> Nro.Telefonico: @Model.Medico.NumeroTelefono</td></tr>            
+        <table border=4 id="table_detail" align=center cellpadding=15>
+            <tr class="titulo"><td><i class="feather-32" data-feather="chevrons-right"></i>      @Model.Medico.Nombre @Model.Medico.Apellidos</td><td style="text-align:center">@Model.Medico.Id</td></tr>
+            <tr><td>    <i class="feather-32" data-feather="award"></i>   Especialidad: @Model.Medico.Especialidad</td></tr>
+            <tr><td>    <i class="feather-32" data-feather="credit-card"></i>    Codigo Interno: @Model.Medico.Codigo</td></tr>
+            <tr><td>    <i class="feather-32" data-feather="credit-card"></i>    Registro RETHUS: @Model.Medico.RegistroRethus</td></tr>
+            <tr><td>    <i class="feather-32" data-feather="triangle"></i>    Genero: @Model.Medico.Genero</td></tr>
+            <tr><td>    <i class="feather-32" data-feather="phone-incoming"></i>    Nro.Telefonico: @Model.Medico.NumeroTelefono</td></tr>            
         </table>
     </div>
     }
 
 @if(@Model.Enfermera!=null){
     <div id="wrapper">
-        <table border=4 id="table_detail" 
-            align=center cellpadding=15>
-
-            <tr class="titulo"><td> @Model.Enfermera.Nombre @Model.Enfermera.Apellidos</td><td style="text-align:center">@Model.Enfermera.Id</td></tr>
-            <tr><td> Genero: @Model.Enfermera.Genero</td></tr>
-            <tr><td> Tarj. Prof: @Model.Enfermera.TarjetaProfesional</td></tr>
-            <tr><td> Horas Laborables: @Model.Enfermera.HorasLaborables</td></tr>
-            <tr><td> Nro.Telefonico: @Model.Enfermera.NumeroTelefono</td></tr>        
+        <table border=4 id="table_detail" align=center cellpadding=15>
+            <tr class="titulo"><td><i class="feather-32" data-feather="chevrons-right"></i>      @Model.Enfermera.Nombre @Model.Enfermera.Apellidos</td><td style="text-align:center">@Model.Enfermera.Id</td></tr>
+            <tr><td>    <i class="feather-32" data-feather="triangle"></i>    Genero: @Model.Enfermera.Genero</td></tr>
+            <tr><td>    <i class="feather-32" data-feather="credit-card"></i>    Tarj. Prof: @Model.Enfermera.TarjetaProfesional</td></tr>
+            <tr><td>    <i class="feather-32" data-feather="calendar"></i>    Horas Laborables: @Model.Enfermera.HorasLaborables</td></tr>
+            <tr><td>    <i class="feather-32" data-feather="phone-incoming"></i>    Nro.Telefonico: @Model.Enfermera.NumeroTelefono</td></tr>        
         </table>
     </div>
     }
 
 @if(@Model.Familiar!=null){
     <div id="wrapper">
-        <table border=4 id="table_detail" 
-            align=center cellpadding=10>
-
-            <tr class="titulo"><td> @Model.Familiar.Nombre @Model.Familiar.Apellidos</td><td style="text-align:center">@Model.Familiar.Id</td></tr>
-            <tr><td> Genero: @Model.Familiar.Genero</td></tr>
-            <tr><td> Parentesco: @Model.Familiar.Parentesco</td></tr>
-            <tr><td> E-Mail: @Model.Familiar.Correo</td></tr>
-            <tr><td> Nro.Telefonico: @Model.Familiar.NumeroTelefono</td></tr>
-                  
+        <table border=4 id="table_detail" align=center cellpadding=10>
+            <tr class="titulo"><td><i class="feather-32" data-feather="chevrons-right"></i>      @Model.Familiar.Nombre @Model.Familiar.Apellidos</td><td style="text-align:center">@Model.Familiar.Id</td></tr>
+            <tr><td>    <i class="feather-32" data-feather="triangle"></i>    Genero: @Model.Familiar.Genero</td></tr>
+            <tr><td>    <i class="feather-32" data-feather="users"></i>    Parentesco: @Model.Familiar.Parentesco</td></tr>
+            <tr><td>    <i class="feather-32" data-feather="mail"></i>    E-Mail: @Model.Familiar.Correo</td></tr>
+            <tr><td>    <i class="feather-32" data-feather="phone-incoming"></i>    Nro.Telefonico: @Model.Familiar.NumeroTelefono</td></tr>                  
         </table>
     </div>  
-    }
-    <br><br>
+}
+
+    <br>
     <div class="dv-cntr">
-    <a asp-page="..\index" class="btn btn-secondary">Cancelar </a>
-    </div> 
+        <a asp-page="..\index" class="btn btn-secondary">Listo</a>
+    </div>     
 
-    
-
-    <style>
+<style>
     .titulo{
         font-size: 40px;
     }

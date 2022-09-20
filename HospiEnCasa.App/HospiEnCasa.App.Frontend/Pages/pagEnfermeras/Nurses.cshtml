@@ -6,7 +6,7 @@
 <h2 class="dv-cntr"><i class="feather-32" data-feather="file-text"></i>ENFERMER@S</h2>
 <br>
 <div class="add-btn">
-    <button asp-page="..\SharedPages\Details" class="btn btn-secondary">Agregar</button>
+     <a asp-page=".\EditEnf" class="btn btn-secondary"><i class="feather-32" data-feather="user-plus"></i></a>
 </div>
 <table class="table">
     <tr>
@@ -27,7 +27,7 @@
                 </a>
             </td>
             <td>
-                <a class="btn btn-secondary table-btn" style="display:inline-block" asp-page="..\SharedPages\Edit" asp-route-nurseId="@nurse.Id">
+                <a class="btn btn-secondary table-btn" style="display:inline-block" asp-page=".\EditEnf" asp-route-Id="@nurse.Id">
                 <i class="feather-24" data-feather="edit" style="display:inline-block"></i>
                 </a>
             </td>

@@ -5,7 +5,6 @@ a.navbar-brand[b-vknwb4m9cw] {
   white-space: normal;
   text-align: center;
   word-break: break-all;
-
 }
 
 a[b-vknwb4m9cw] {
@@ -42,6 +41,8 @@ button.accept-policy[b-vknwb4m9cw] {
 
 .footer[b-vknwb4m9cw] {
   position: absolute;
+  background-color: black;
+  color: white;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
@@ -49,7 +50,7 @@ button.accept-policy[b-vknwb4m9cw] {
 }
 
 .pb-3[b-vknwb4m9cw] {
-  background-image: url(C:\Hospitalizacion\HospiEnCasa.App\HospiEnCasa.App.Frontend\Pages\hospitalizacion-hogar.jpg);
+  background-image: url("../Pages/Data/hospitalizacion-hogar.jpg");
   /* background-color: #1861ac; */
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -72,15 +73,23 @@ button.accept-policy[b-vknwb4m9cw] {
 
   .nav-item[b-vknwb4m9cw]{
     font-size: 16px;
+    
   }
 
   .navbar-brand[b-vknwb4m9cw]{
     font-size: 32px;
+    color: white;
+    
   }
 
   .nav-item:hover[b-vknwb4m9cw]{
-background-color:lightslategray;
-color: white;
+  background-color:lightslategray;
+  color: white;
+  }
+
+  #navbar-buttons[b-vknwb4m9cw]{
+    text-align: center;
+    color: white;
   }
 
 

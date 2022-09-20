@@ -3,10 +3,10 @@
 @{
 }
 <br>
-<h2 class="dv-cntr"><i class="feather-32" data-feather="file-text"></i>MEDICOS</h2>
+<h2 class="dv-cntr"><i class="feather-32" data-feather="file-text"></i> MEDICOS</h2>
 <br>
 <div class="add-btn">
-    <button asp-page="..\SharedPages\Details" class="btn btn-secondary" id="btn-add">Agregar Medico Nuevo</button>
+    <a asp-page=".\EditMed" class="btn btn-secondary"><i class="feather-32" data-feather="user-plus"></i></a>
 </div>
 <table class="table table-striped">
     <tr>
@@ -15,8 +15,9 @@
         <th><i class="feather-16" data-feather="award"></i> Especialidad</th>
         <th><i class="feather-16" data-feather="credit-card"></i> Codigo Interno</th>
         <th><i class="feather-16" data-feather="credit-card"></i> Registro RETHUS</th>
-  </tr>
-    @foreach (var medico in Model.ListMedicos){
+    </tr>
+    @foreach (var medico in Model.ListMedicos)
+    {
         <tr>
             <td>@medico.Id</td>
             <td>@medico.Nombre @medico.Apellidos</td>
@@ -24,13 +25,15 @@
             <td>@medico.Codigo</td>
             <td>@medico.RegistroRethus</td>
             <td>
-                <a class="btn btn-secondary table-btn" style="display:inline-block" asp-page="..\SharedPages\Details" asp-route-Id="@medico.Id">
-                <i class="feather-24" data-feather="eye" style="display:inline-block"></i>
+                <a class="btn btn-secondary table-btn" style="display:inline-block" asp-page="..\SharedPages\Details"
+                asp-route-Id="@medico.Id">
+                    <i class="feather-24" data-feather="eye" style="display:inline-block"></i>
                 </a>
             </td>
             <td>
-                <a class="btn btn-secondary table-btn" style="display:inline-block" asp-page="..\SharedPages\Edit" asp-route-medicoId="@medico.Id">
-                <i class="feather-24" data-feather="edit" style="display:inline-block"></i>
+                <a class="btn btn-secondary table-btn" style="display:inline-block" asp-page=".\EditMed"
+                asp-route-Id="@medico.Id">
+                    <i class="feather-24" data-feather="edit" style="display:inline-block"></i>
                 </a>
             </td>
         </tr>
@@ -38,5 +41,5 @@
 </table>
 <br><br>
 <div class="dv-cntr">
-<a asp-page="..\Index" class="btn btn-secondary"><i class="feather-32" data-feather="chevrons-left"></i></a>
+    <a asp-page="..\Index" class="btn btn-secondary"><i class="feather-32" data-feather="chevrons-left"></i></a>
 </div>

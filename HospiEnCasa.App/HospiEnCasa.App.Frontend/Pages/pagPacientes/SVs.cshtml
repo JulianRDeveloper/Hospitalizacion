@@ -1,0 +1,82 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.SVsModel
+@{
+  @* int pacienteId= Model.Paciente.Id;   *@
+}
+
+@if(@Model.Paciente!=null){
+    <div class="container" style="margin-top: 5%; margin-bottom: 5%;">
+      <div class="text-center">
+        <h1><i class="feather-24" data-feather="activity"></i>     SIGNOS VITALES</h1>
+        <h5><i class="feather-24" data-feather="user"></i>  Paciente:     @Model.Paciente.Nombre  @Model.Paciente.Apellidos</h5>
+      <br>
+      </div>
+        <table>
+          <thead style="background-color: black; color:whithe;">
+            <tr>
+              @* maximo de columnas que se van a desplegar *@
+              <td colspan="1"> 
+                <h5><a class="btn_show" href="#!"><strong>    >> @Model.Paciente.Nombre  @Model.Paciente.Apellidos</strong></a></h5>
+              </td>
+            </tr>
+          </thead>
+          <tbody id="contenido" style="display: none;">
+            <tr id="fila">
+              <td><b>Feha:</b></td>
+              <td><b>Tipo de Signo:</b></td>
+              <td><b>Valor:</b></td>
+            </tr>
+              @foreach (var signo in @Model.SVs)
+              {                
+                <tr id="fila">
+                  <td colspan="3">@signo.FechaHora</td>
+                  <td colspan="3">@signo.Signo</td>
+                  <td colspan="3"><b>@signo.Valor</b></td>
+                </tr>
+              }                
+          </tbody>
+        </table>
+      <br>
+      <div class="text-center" >
+        <a asp-page="./Pacientes" class="btn btn-secondary"><i class="feather-32" data-feather="chevrons-left" style="display:inline-block"></i> </a>
+        <a asp-page="/formSigVit" class="btn btn-secondary"><i class="feather-32" data-feather="file-plus" style="display:inline-block"></i>Agregar </a> 
+      </div>
+</div>
+}
+
+<style>
+.input-sm{
+        height: 20px;
+        font-size: 9pt;
+        width: 100%;
+    }
+    .letra{
+        font-size: 9pt;
+    }
+    
+    table {
+        border-collapse: collapse;
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 20%;
+    }
+    tbody {
+        display:block;
+    }
+    thead, tbody tr {
+        display:table;
+        width:100%;
+    }
+    tr {
+        border-bottom: 1px solid #000;
+    }
+
+    #fila{
+      align-items: inherit;
+      align-content: inherit;
+
+    }
+
+</style>

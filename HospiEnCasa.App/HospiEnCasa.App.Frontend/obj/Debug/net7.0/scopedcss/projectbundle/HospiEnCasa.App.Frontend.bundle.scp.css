@@ -75,8 +75,9 @@
     }
 
     .btn[b-4iyobb86f0]{
-        border:black;
-        background-color:rgb(79, 50, 47);
+        border-color:black;
+        border: 2;
+        /* background-color:rgb(79, 50, 47); */
         cursor:pointer;
         display:inline-block
     }
@@ -105,21 +106,26 @@
     height: 32px;
     }
 
-    .btn[b-9ukdv03sz0]{
+    /* .btnNN{
         border:black;
         background-color:rgb(79, 50, 47);
         cursor:pointer;
         display:inline-block
-    }
+    } */
 
-    .dv-cntr[b-9ukdv03sz0]{
+    #dv-cntr[b-9ukdv03sz0]{
         text-align:center;
+        align-content: center;
         height: 40px;
     }
 
-    .add-btn[b-9ukdv03sz0]{
+    #marg-der[b-9ukdv03sz0]{
         text-align: right;
-        margin-right: 2%;
+        margin-right: 1%;
+        }
+
+    .container[b-9ukdv03sz0]{
+        margin-bottom: 10%;
     }
 /* _content/HospiEnCasa.App.Frontend/Pages/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
@@ -129,7 +135,6 @@ a.navbar-brand[b-vknwb4m9cw] {
   white-space: normal;
   text-align: center;
   word-break: break-all;
-
 }
 
 a[b-vknwb4m9cw] {
@@ -166,6 +171,8 @@ button.accept-policy[b-vknwb4m9cw] {
 
 .footer[b-vknwb4m9cw] {
   position: absolute;
+  background-color: black;
+  color: white;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
@@ -173,7 +180,7 @@ button.accept-policy[b-vknwb4m9cw] {
 }
 
 .pb-3[b-vknwb4m9cw] {
-  background-image: url(C:\Hospitalizacion\HospiEnCasa.App\HospiEnCasa.App.Frontend\Pages\hospitalizacion-hogar.jpg);
+  background-image: url("../Pages/Data/hospitalizacion-hogar.jpg");
   /* background-color: #1861ac; */
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -196,15 +203,23 @@ button.accept-policy[b-vknwb4m9cw] {
 
   .nav-item[b-vknwb4m9cw]{
     font-size: 16px;
+    
   }
 
   .navbar-brand[b-vknwb4m9cw]{
     font-size: 32px;
+    color: white;
+    
   }
 
   .nav-item:hover[b-vknwb4m9cw]{
-background-color:lightslategray;
-color: white;
+  background-color:lightslategray;
+  color: white;
+  }
+
+  #navbar-buttons[b-vknwb4m9cw]{
+    text-align: center;
+    color: white;
   }
 
 

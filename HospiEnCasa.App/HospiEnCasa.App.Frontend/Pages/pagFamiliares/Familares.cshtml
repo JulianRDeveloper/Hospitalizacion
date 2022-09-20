@@ -6,7 +6,7 @@
 <h2 class="dv-cntr"><i class="feather-32" data-feather="file-text"></i>FAMILIARES</h2>
 <br>
 <div class="add-btn">
-    <button asp-page="..\SharedPages\Details" class="btn btn-secondary">Nuevo Familiar Designado</button>
+     <a asp-page=".\EditFam" class="btn btn-secondary"><i class="feather-32" data-feather="user-plus"></i></a>
 </div>
 <table class="table">
     <tr>
@@ -25,7 +25,7 @@
                 </a>
             </td>
             <td>
-                <a class="btn btn-secondary table-btn" style="display:inline-block" asp-page="..\SharedPages\Edit" asp-route-familiarId="@familiar.Id">
+                <a class="btn btn-secondary table-btn" style="display:inline-block" asp-page=".\EditFam" asp-route-Id="@familiar.Id">
                 <i class="feather-24" data-feather="edit" style="display:inline-block"></i>
                 </a>
             </td>

@@ -39,19 +39,19 @@ namespace HospiEnCasa.App.Persistencia
             return (IEnumerable<FamiliarDesignado>)_appContext.FamiliaresDesignados;
         }
 
-        FamiliarDesignado IRepositorioFamiliarDesignado.GetFamiliar(int idFamiliar)
+        FamiliarDesignado IRepositorioFamiliarDesignado.GetFamiliar(int Id)
         {
-            return _appContext.FamiliaresDesignados.FirstOrDefault(p=> p.Id == idFamiliar);
+            return _appContext.FamiliaresDesignados.FirstOrDefault(p=> p.Id == Id);
         }
 
         FamiliarDesignado IRepositorioFamiliarDesignado.UpdateFamiliar(FamiliarDesignado familiar)
         {
-            var familiarEncontrado = _appContext.FamiliaresDesignados.FirstOrDefault(p=> p.Id == familiar.Id);
-            if(familiarEncontrado!=null){
+            var familiarEncontrado = _appContext.FamiliaresDesignados.SingleOrDefault(p=> p.Id == familiar.Id);
+            if(familiar!=null){
                 familiarEncontrado.Nombre=familiar.Nombre;
                 familiarEncontrado.Apellidos=familiar.Apellidos;
                 familiarEncontrado.NumeroTelefono=familiar.NumeroTelefono;
-                familiarEncontrado.Genero=familiar.Genero;
+                //familiarEncontrado.Genero=familiar.Genero;
 
                 familiarEncontrado.Parentesco=familiar.Parentesco;
                 familiarEncontrado.Correo=familiar.Correo;

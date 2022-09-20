@@ -1,0 +1,137 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.EditFamModel
+@{
+}
+@if(@Model.Familiar!=null){
+    <div id="wrapper">
+        <table border=4 id="table_detail" align=center cellpadding=10>
+            <tr><td id= "celda">
+                <br>
+                <h2 style="text-align:center"><i class="feather-32" data-feather="file-text"></i>    @Model.Familiar.Nombre @Model.Familiar.Apellidos</h2>
+                <br>
+                <form class="formy" method="post" id="f-fields">
+                    <input type="hidden" asp-for="Familiar.Id" />
+                    <div class="form-row align-items-center">
+                        <div class="form-group row" id="bloq">
+                            <label class="col-sm-4 col-form-label" id="tag" asp-for="Familiar.Nombre"></label>
+                            <div class="col-6">
+                                <input asp-for="Familiar.Nombre" class="form-control">
+                                <small id="HelpBlock" class="form-text text-muted">Digite nombres completos.</small>
+                                <span class="text-danger" asp-validation-for="Familiar.Nombre"></span>
+                         </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label" id="tag" asp-for="Familiar.Apellidos"></label>
+                        <div class="col-6">
+                            <input asp-for="Familiar.Apellidos" class="form-control">
+                            <small id="HelpBlock" class="form-text text-muted">Digite apellidos completos.</small>
+                            <span class="text-danger" asp-validation-for="Familiar.Apellidos"></span>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label" id="tag" asp-for="Familiar.NumeroTelefono"></label>
+                        <div class="col-6">
+                            <input asp-for="Familiar.NumeroTelefono" class="form-control">
+                            <small id="HelpBlock" class="form-text text-muted">Digite Especifique el indicativo de la ciuad.</small>
+                            <span class="text-danger" asp-validation-for="Familiar.NumeroTelefono"></span>
+                        </div>
+                    </div>
+                    <br>
+                    @if(@Model.Familiar.Id<1){
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-form-label" id="tag" asp-for="Familiar.Genero"></label>
+                            <div class="col-6">
+                                <select asp-for="Familiar.Genero" id="inputState" class="form-control">
+                                    <option selected>Seleccione...</option>
+                                    <option value="1">Femenino</option>
+                                    <option value="0">Masculino</option>
+                                </select>
+                                <span class="text-danger" asp-validation-for="Familiar.Genero"></span>
+                            </div>
+                        </div>
+                        <br>
+                    }
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label" id="tag" asp-for="Familiar.Parentesco"></label>
+                        <div class="col-6">
+                            <input asp-for="Familiar.Parentesco" class="form-control">
+                            <span class="text-danger" asp-validation-for="Familiar.Parentesco"></span>
+                        </div>
+                    </div>
+                    <br>                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label" id="tag" asp-for="Familiar.Correo"></label>
+                        <div class="col-6">
+                            <input asp-for="Familiar.Correo" class="form-control">
+                            <small id="HelpBlock" class="form-text text-muted">No se podrá cambiar.</small>
+                            <span class="text-danger" asp-validation-for="Familiar.Correo"></span>
+                        </div>
+                    </div>
+                    <br>                 
+                    }
+                    <div class="form-group">
+                        <div class="form-check" id="cb-cntr">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" required>
+                            <label class="form-check-label" for="invalidCheck3">Tengo seguridad de la informacion que voy a registrar!</label>
+                            <div class="invalid-feedback">Usted debe estar seguro de la informacion que se va registrar...
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="dv-cntr">
+                        <button type="submit" class="btn btn-secondary"><i class="feather-32" data-feather="user-check"></i></button>
+                    </div>
+                </form>
+                <br>
+                <div id="dv-cntr">
+                    <a asp-page="./Familiares" class="btn btn-secondary">Cancelar </a>
+                </div>
+            </td></tr>
+        </table>
+    </div>
+}
+
+
+
+<style>
+     #dv-cntr {
+        text-align: center;
+        height: 32px;        
+    }
+
+    #cb-cntr{
+        text-align:center;
+        vertical-align:middle;
+        margin-left: 25%;
+        margin-right:20%;
+    }
+
+    #tag {
+        text-align: right;
+    }    
+    
+    #btn-s {
+        width: 100px;
+    }
+
+    #celda {
+        column-width: 650px;
+        grid-column-end: auto;
+    }
+
+    #wrapper {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+    }
+
+    #title {
+        font-size: 40px;
+    }
+
+    #table_detail {
+        margin-bottom: 5%;
+    }
+</style>
+
